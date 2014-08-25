@@ -344,3 +344,53 @@ function myOtherFunction() {
 
 console.log(awesomeVariable); //will work
 ```
+
+Getting Input
+--------------------------------------------------
+
+Input is great! If only we all spent more time listening and less time talking (and here I am, talking away).
+
+Here's the most basic way to get input from the user: an input (it actually becomes a **textfield** but close enough).
+
+```
+<input id="userName" />
+```
+
+(Take note of that ID we'll be using it soon)
+
+Now let's make another input tha's a bit more.. interactive. A **button**
+
+```
+<input type='button' onclick='getUsername()' />
+```
+
+Okay, great. Let's finish this up. *Assuming we have both of these on the screen* we can add this to our typescript file:
+
+```
+function getUsername() {
+	var username = document.getElementById('userName').value;
+	console.log(username);
+}
+```
+
+Two things here:
+
+*document.getElementById* will get any element on the screen with an ID that you pass in as an argument.
+*.value* will get the value of any input element, if it has one.
+
+
+Showing output
+-------------------------------------------------------
+
+Add a tag with an ID, like so
+
+```
+<div id='output'></div>
+```
+
+Inside any function, change its *innerHTML*
+
+```
+var output = document.getElementById('output');
+output.innerHTML = "Hello!";
+```
