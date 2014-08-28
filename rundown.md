@@ -16,7 +16,7 @@ Numbers
 --------------------------
 
 ```
-var meaningOfLife = 42;
+var meaningOfLif:number = 42;
 ```
 
 Arrays
@@ -32,7 +32,7 @@ Booleans
 ----------------------------
 
 ```
-var isIndianaWeatherOdd = true;
+var isIndianaWeatherOdd:bool = true;
 ```
 
 Functions
