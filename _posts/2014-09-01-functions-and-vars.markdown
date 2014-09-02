@@ -18,7 +18,7 @@ Variables store values. That is it. (Values, of course, can be a lot of things, 
 
 Type the keyword `var`, the name of the var, a *colon*, and then a *variable type*.
 
-{% highlight typescript %}
+{% highlight javascript %}
 var myVar:any;
 {% endhighlight %}
 
@@ -26,7 +26,7 @@ __Putting stuff into variables__
 
 Use the **equals sign (=)**
 
-{% highlight typescript %}
+{% highlight javascript %}
 var something = 'Hello';
 something = 'Goodbye';
 {% endhighlight %}
@@ -39,7 +39,7 @@ We're going to be working with three major variable types, to begin with, but yo
 
 All of your variables in this class *must have a type*. A type defines what the variable is. In order to specify a type, you write the name of the type after the colon. For instance, to make a variable a number type, we would write this:
 
-{% highlight typescript %}
+{% highlight javascript %}
 var showingTypes:number;
 {% endhighlight %}
 
@@ -48,13 +48,13 @@ var showingTypes:number;
 
 These store.. numbers.
 
-{% highlight typescript %}
+{% highlight javascript %}
 var first:number = 10;
 {% endhighlight %}
 
 All sorts of numbers
 
-{% highlight typescript %}
+{% highlight javascript %}
 var another:number = 5.66;
 var pewPew:number = 1000000000000000;
 var yougetthepoint:number = 0.45;
@@ -64,7 +64,7 @@ var yougetthepoint:number = 0.45;
 *Strings*
 -------------------------------------
 
-{% highlight typescript %}
+{% highlight javascript %}
 var another:string = 'Hello world!';
 {% endhighlight %}
 
@@ -79,7 +79,7 @@ Strings made in code like this are called **string literals**.
 
 Store **true** or **false**.
 
-{% highlight typescript %}
+{% highlight javascript %}
 var isCold:Boolean = false;
 var isWarm:Boolean = true;
 {% endhighlight %}
@@ -90,7 +90,7 @@ Operands
 
 You can do more with variables than just assign single values.
 
-{% highlight typescript %}
+{% highlight javascript %}
 var a:number = 4;
 var b:number = 2;
 
@@ -116,7 +116,7 @@ Modulo
 Also Known As "remainder"
 The part left over after division
 
-{% highlight typescript %}
+{% highlight javascript %}
 7 % 3 //1
 12 % 10 //2
 {% endhighlight %}
@@ -131,7 +131,7 @@ How do I do that?
 Incrementing/Decrementing
 ------------------------------
 
-{% highlight typescript %}
+{% highlight javascript %}
 var a:number = 5;
 
 //incrementing
@@ -150,7 +150,7 @@ a = a / 3; //2
 Incrementing/Decrementing/other shorthand
 -----------------------------
 
-{% highlight typescript %}
+{% highlight javascript %}
 var a:number = 5;
 
 //incrementing
@@ -171,7 +171,7 @@ String Concatenation
 
 One can also use the plus sign to add strings together. This is called **String concatenation**.
 
-{% highlight typescript %}
+{% highlight javascript %}
 var first:string = "Hello";
 var last:string = "World";
 var else:string = first + last; //'HelloWorld';
@@ -184,7 +184,7 @@ Logging
 
 Logging lets you see the value of variables in the developer console. Here's an example:
 
-{% highlight typescript %}
+{% highlight javascript %}
 var someVar:string = "Hello";
 console.log(someVar);
 {% endhighlight %}
@@ -199,7 +199,7 @@ They code inside their curly brackets is not used until they are **called**, **i
 
 **Here is a function**
 
-{% highlight typescript %}
+{% highlight javascript %}
 function sayHello() {
 	console.log("Hello");
 }
@@ -209,13 +209,13 @@ This function will, when used, output some text to our lovely developer console.
 
 **Here's how to run that function**
 
-{% highlight typescript %}
+{% highlight javascript %}
 sayHello();
 {% endhighlight %}
 
 If you put it all together, it looks like this
 
-{% highlight typescript %}
+{% highlight javascript %}
 
 function sayHello() {
 	console.log("Hello");
@@ -236,7 +236,7 @@ Function arguments
 
 **Argument Example**
 
-{% highlight typescript %}
+{% highlight javascript %}
 function sayHelloName(name:string) {
 	//name is now a variable in this function
 	//we can do anything we want with it
@@ -253,7 +253,7 @@ Calling a function with arguments
 
 **Using our sayHelloName function**
 
-{% highlight typescript %}
+{% highlight javascript %}
 sayHelloName("Todd");
 {% endhighlight %}
 
@@ -263,7 +263,7 @@ Multiple arguments
 - Functions can take multiple arguments
 - Put a comma between each argument
 
-{% highlight typescript %}
+{% highlight javascript %}
 
 //the function
 function sayHelloSalutation(salutation:string, name:string) {
@@ -286,7 +286,7 @@ Function returns
 
 Functions can also return values. Here's a simple example
 
-{% highlight typescript %}
+{% highlight javascript %}
 function makeHello() {
 	var aString = "hello";
 	return aString;
@@ -302,7 +302,7 @@ var aHello:string = "Hello";
 Complex function usage
 ---------------------------------------------
 
-{% highlight typescript %}
+{% highlight javascript %}
 //our function
 function generateHello(salutation, name) {
 	var sal = salutation + " " + name +"!";
@@ -324,7 +324,7 @@ Now that we have functions, we need to start worrying about **variable scope**
 
 **But** variables created outside of that function are.
 
-{% highlight typescript %}
+{% highlight javascript %}
 function myFunc() {
 	var awesomeVariable:string = "Pretty cool";
 }
@@ -337,7 +337,7 @@ function myOtherFunction() {
 console.log(awesomeVariable); //won't work
 {% endhighlight %}
 
-{% highlight typescript %}
+{% highlight javascript %}
 var awesomeVariable:string = "Pretty cool";
 
 function myFunc() {
@@ -371,9 +371,9 @@ Now let's make another input tha's a bit more.. interactive. A **button**
 <input type='button' onclick='getUsername()' />
 {% endhighlight %}
 
-Okay, great. Let's finish this up. *Assuming we have both of these on the screen* we can add this to our typescript file:
+Okay, great. Let's finish this up. *Assuming we have both of these on the screen* we can add this to our javascript file:
 
-{% highlight typescript %}
+{% highlight javascript %}
 function getUsername() {
 	var username = document.getElementById('userName').value;
 	console.log(username);
@@ -397,7 +397,7 @@ Add a tag with an ID, like so
 
 Inside any function, change its *innerHTML*
 
-{% highlight typescript %}
+{% highlight javascript %}
 var output = document.getElementById('output');
 output.innerHTML = "Hello!";
 {% endhighlight %}
