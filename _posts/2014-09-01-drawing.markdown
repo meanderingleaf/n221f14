@@ -29,11 +29,11 @@ Color, in pixi, is set using *hexadecimal*. We're not going to go into how to co
 
 *Some color examples*
 
-	* **Red:** 0xFF0000
-	* **Green:** 0x00FF00
-	* **Blue:** 0x0000FF
-	* **White:** 0xFFFFFF
-	* **Black:** 0x000000
+- **Red:** 0xFF0000
+- **Green:** 0x00FF00
+- **Blue:** 0x0000FF
+- **White:** 0xFFFFFF
+- **Black:** 0x000000
 
 Drawing
 ------------------------------
