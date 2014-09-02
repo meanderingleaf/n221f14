@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "Drawing"
+date:   2014-09-02 03:24:54
+categories: update
+---
+
+Drawing using Pixi.js
+-------------------------
+
+Pixi.js is a *javascript library* that is used to draw to something called the *canvas* (we'll be working with the canvas even more later). It lets us create (and animate) visual elements with relative ease. To get running with it we need to understand a few things about color and how the computer displays graphics.
+
+
+Positioning
+--------------------------
+
+When working with positioning in computer code, you most often will be working in units of **pixels**. The *upper left corner* of the screen will be pixel [0,0].
+
+*X increases* as you go further right on the screen.
+
+*y increases* as you go further down the screen.
+
+So, if you have a screen that is 800x600 pixels, a point in the middle of it would be [400,300].
+
+Color
+-----------------------------
+
+Color, in pixi, is set using *hexadecimal*. We're not going to go into how to convert the colors manually. Just know that if you want a specific color you will need to look it up, either using photoshop or a tool online.
+
+*Some color examples*
+
+**Red:** 0xFF0000
+**Green:** 0x00FF00
+**Blue:** 0x0000FF
+**White:** 0xFFFFFF
+**Black:** 0x000000
+
+All right, to drawing
+------------------------------
