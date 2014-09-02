@@ -35,5 +35,7 @@ Color, in pixi, is set using *hexadecimal*. We're not going to go into how to co
 **White:** 0xFFFFFF
 **Black:** 0x000000
 
-All right, to drawing
+Drawing
 ------------------------------
+
+AKA 'this is where the magic lives'. Let's get through the drawing setup first. **Assuming you have pixi.js and pixi.d.ts in your src folder**
