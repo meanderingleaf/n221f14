@@ -118,8 +118,11 @@ Logical operators
 --------------------------------------------------------
 
 - The previous example can be simplified down a bit using **logical operators**
-- **&&** ('AND')
-- **||** ('OR')
+
+{% highlight javascript %}
+&& //('AND')
+|| //('OR')
+{% endhighlight %}
 
 How the logical operators work
 --------------------------------------------------------
@@ -155,7 +158,31 @@ else
 }
 {% endhighlight %}
 
-A brief note about fomatting
+Else if
+--------------------------------------------------------
+
+Else ifs will only run if the previous if does not evaluate to true.
+They come after a closing curly bracket, and you can have also many as you want.
+
+
+{% highlight javascript %}
+
+var grade:number = 85;
+
+if(grade >= 90) {
+	console.log("Hooray.");
+} else if (grade >= 80) {
+	console.log("good enough.");
+} else if (grade >=70) {
+	console.log("I am avergae.");
+} else {
+	console.log("Count have done better...")
+}
+
+{% endhighlight %}
+
+
+A brief note about formatting
 ---------------------------------------------------------
 
 - Note that every time a { appears, the next line is tabbed in

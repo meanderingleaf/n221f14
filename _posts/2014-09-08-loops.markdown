@@ -1,0 +1,126 @@
+Loops
+----------------------
+
+Are a way of doing the same thing, multiple times.
+
+For loop
+----------------------
+
+```
+//This particular loop will run five times
+//Its cool like that
+for(var i = 0; i < 5; i++) 
+{
+	console.log(i);
+}
+```
+
+- For loops have three parts inside their parens
+	1. Create a variable (called an **iterand** when used in looping, and often named 'i'), and sets it to a value (usually '0')
+	2. A logical test. **The moment the test returns false, the loop halts**
+		- This test is run every time before the loop is executed
+	3. A statement to run when the loop has completed. (Usually adds one to the **iterand**)
+
+The other half of the loop is the block that comes after it. This is the code that is run for every **iteration** (or loop). In the example above, its everything inside the curly brackets, so we're just outputting to the console what the value of *i* is for that loop.
+
+Some others.
+
+```
+//runs seven times
+for(var i = 0; i < 7; i++) 
+{
+	console.log(i);
+}
+
+//runs 100 times
+for(var i = 0; i < 100; i++) 
+{
+	console.log(i);
+}
+```
+
+
+While loop
+--------------------------
+
+Is just the logical portion of the for loop.
+
+Here's a while loop, rewritten
+
+```
+var i = 0;
+while(i < 5) 
+{
+	console.log(i);
+	i++;
+}
+```
+
+
+Here's a fun one:
+
+```
+while(true) 
+{
+	
+}
+```
+
+The break statement
+-----------------------------
+
+Let's say you did what you need to do in a loop, but its still running.
+
+You can **break** out of it.
+
+```
+//this loop will only run 5 times
+for(var i = 0; i<10; i++) {
+	if(i>4) {
+		break;
+	}
+}
+```
+
+Document.write
+------------------------------
+
+(Finally! A way to get text onto the screen for the user **not using a popup**)
+
+Document.write allows you to write html right into the DOM at runtime. Its pretty sweet.
+
+Let's assume you have a boring html page that looks like this:
+
+```
+<html>
+	<head>
+	</head>
+	<body>
+
+	</body>
+</html>
+```
+
+**That's pretty boring**.
+
+If you add a script to the page like so:
+
+```
+<script>
+	document.write("<h1>Hello world!</h1>");
+</script>
+```
+
+*Once your script runs* your page will now look like this:
+
+```
+<html>
+	<head>
+	</head>
+	<body>
+		<h1>Hello world!</h1>
+	</body>
+</html>
+```
+
+Pretty great, huh?

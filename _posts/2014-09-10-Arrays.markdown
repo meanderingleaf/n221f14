@@ -1,0 +1,161 @@
+
+Arrays
+-------------------
+
+- Arrays are also a collection of variables. They used for lists of similar variables (i.e. a bunch of numbers, or images).
+- Arrays are indexed. Supplying the index (typically a number) to the array will return the variable at that index.
+- Array indexes start at zero (0), and progress upwards
+- To get an item out of the array, use the square brackets and the index
+
+Array Metaphor
+-------------------
+
+- You could think of arrays as a filing cabinet…
+- You can only put one item into each box, and you label them so you can find them with ease.
+- The labels are the indexes of the cabinet / array
+
+
+Making an Array
+---------------------
+
+{% highlight javascript %}
+var myArray[]:number = [1,2,3,4];
+{% endhighlight %}
+
+{% highlight javascript %}
+var myArray[]:string = [];
+{% endhighlight %}
+
+
+Getting a value out of an array
+-----------------------
+
+
+Write the square brackets, and inside the index you want.
+
+{% highlight javascript %}
+var myArray[]:number = [5,4,3,2,1];
+
+myArray[0]; // 5
+myArray[2]; // 3
+myArray[3]; // 2
+{% endhighlight %}
+
+
+Modifying the array
+-------------------------
+
+
+- Write the square brackets to get to what is stored in that index of the array
+- Works just like a variable
+
+{% highlight javascript %}
+myArray[0] = 5;
+myArray[3] = 39;
+{% endhighlight %}
+
+Useful array properties and methods
+--------------------------
+
+- **length**: returns the number of elements in the array
+- **push(something)**: adds an element at index zero, pushes all others back
+- **pop()**: takes a variable off the top of the array and returns it
+- **shift(something)**: adds an element at the very end of the array
+- **unshift()**: takes a variable off the bottom of the array
+- **sort()**: will sort the variables numerically or alphabetically
+- **splice(index, number)**: removes and returns (number) of elements from the array, starting at (index)
+- **toString()**: Like number.toString. This returns a string of every entry in the array
+
+Some array examples
+---------------------------------
+
+{% highlight javascript %}
+var myArray = new Array("This", "array", "already", "has", "some", "content"); 
+console.log(myArray[0]); 
+console.log(myArray[2]); 
+console.log(myArray.toString());
+{% endhighlight %}
+{% endhighlight %}
+Output
+This 
+already 
+This, array, already, has, some, content
+
+{% highlight javascript %}
+var myArray = new Array("This", "array", "already", "has", "some", "content");
+var firstWord = myArray.pop(); 
+console.log(firstWord); 
+var lastWord = myArray.shift();
+console.log(lastWord); 
+console.log("Length " + myArray.length);
+{% endhighlight %}
+
+Output
+This 
+content 
+Length: 4
+
+
+Splitting strings
+------------------------------
+
+Its possible to make an array out of strings by splitting  them
+
+Example:
+
+{% highlight javascript %}
+var statement = “Some dogs have two teeth”;
+var splitStatement = statement.split(“ “); //split on the spaces
+{% endhighlight %}
+
+The data in splitStatement will be
+[ “some”, “dogs”, “have”, “two”, “teeth” ]
+
+
+Yep, you can split on anything
+
+var source = “Dogs,cats,rats,mice”;
+var split = source.split(“,”); // [ “Dogs”, “cats”, “rats”, “mice” ]
+
+var source = “Dogs,cats,rats,mice”;
+var split = source.split(“rats,”); // [ “Dogs,cats,”,“mice” ];
+
+
+'Iterating' through an array
+----------------------------------
+
+{% highlight javascript %}
+var myArray = [ 2, 4, 6, 8, 10 ];
+for(var i =o; i , myArray.length; i++) {
+	var itemAtIndex = myArray[i];
+	console.log(itemAtIndex);
+}
+{% endhighlight %}
+
+Summing up items in an array
+-------------------------------------
+
+{% highlight javascript %}
+var sum = 0;
+var myArray = [ 2, 4, 6, 8, 10 ];
+for(var i =o; i , myArray.length; i++) {
+	var itemAtIndex = myArray[i];
+	sum += itemAtIndex;
+}
+{% endhighlight %}
+
+Searching Arrays
+----------------------------------------
+
+
+{% highlight javascript %}
+var myArray = [ “Spock”, “Kirk”, “McCoy”, “Luffy” ];
+var thingToLookFor = “Luffy”;
+
+for(var i =0; i < myArray.length; i++) {
+	var itemAtIndex = myArra[i];
+	if( itemAtIndex == thingToLookFor) {
+		break;
+	}
+}
+{% endhighlight %}
