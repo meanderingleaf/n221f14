@@ -10,9 +10,15 @@ Arrays
 Array Metaphor
 -------------------
 
+![Metaphore](img/cabinet.png)
+
 - You could think of arrays as a filing cabinet…
 - You can only put one item into each box, and you label them so you can find them with ease.
 - The labels are the indexes of the cabinet / array
+
+![Metaphore](img/array_drawing.png)
+
+![Metaphore](img/array_drawing_2.png)
 
 
 Making an Array
