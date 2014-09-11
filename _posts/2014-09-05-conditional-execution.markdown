@@ -130,13 +130,15 @@ How the logical operators work
 - looks for a true/false one either side
 - Turns into a single true/false
 
-true 	|| false 	: true
-true 	|| true 	: true
-false	|| false 	: false
+{% highlight javascript %}
+true 	|| false 	// true
+true 	|| true 	// true
+false	|| false 	// false
 
-true 	&& true		: true
-true 	&& false	: false
-false	&& false	: false
+true 	&& true		// true
+true 	&& false	// false
+false	&& false	// false
+{% endhighlight %}
 
 Simplifying our previous if/else statement
 --------------------------------------------------------
