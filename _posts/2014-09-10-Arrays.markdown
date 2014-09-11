@@ -75,7 +75,7 @@ console.log(myArray[0]);
 console.log(myArray[2]); 
 console.log(myArray.toString());
 {% endhighlight %}
-{% endhighlight %}
+
 Output
 This 
 already 
