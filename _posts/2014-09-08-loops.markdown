@@ -14,14 +14,14 @@ Are a way of doing the same thing, multiple times.
 For loop
 ----------------------
 
-```
+{% highlight javascript %}
 //This particular loop will run five times
 //Its cool like that
 for(var i = 0; i < 5; i++) 
 {
 	console.log(i);
 }
-```
+{% endhighlight %}
 
 - For loops have three parts inside their parens
 	1. Create a variable (called an **iterand** when used in looping, and often named 'i'), and sets it to a value (usually '0')
@@ -33,7 +33,7 @@ The other half of the loop is the block that comes after it. This is the code th
 
 Some others.
 
-```
+{% highlight javascript %}
 //runs seven times
 for(var i = 0; i < 7; i++) 
 {
@@ -45,7 +45,7 @@ for(var i = 0; i < 100; i++)
 {
 	console.log(i);
 }
-```
+{% endhighlight %}
 
 
 While loop
@@ -55,24 +55,24 @@ Is just the logical portion of the for loop.
 
 Here's a while loop, rewritten
 
-```
+{% highlight javascript %}
 var i = 0;
 while(i < 5) 
 {
 	console.log(i);
 	i++;
 }
-```
+{% endhighlight %}
 
 
 Here's a fun one:
 
-```
+{% highlight javascript %}
 while(true) 
 {
 	
 }
-```
+{% endhighlight %}
 
 The break statement
 -----------------------------
@@ -81,54 +81,96 @@ Let's say you did what you need to do in a loop, but its still running.
 
 You can **break** out of it.
 
-```
+{% highlight javascript %}
 //this loop will only run 5 times
 for(var i = 0; i<10; i++) {
 	if(i>4) {
 		break;
 	}
 }
-```
+{% endhighlight %}
 
-Document.write
-------------------------------
 
-(Finally! A way to get text onto the screen for the user **not using a popup**)
+Drawing with loops
+--------------------------------
 
-Document.write allows you to write html right into the DOM at runtime. Its pretty sweet.
+Drawing with loops can be rather fun if you play with the *iterator*.
 
-Let's assume you have a boring html page that looks like this:
+**Cicles of circles circling circles.**
 
-```
-<html>
-	<head>
-	</head>
-	<body>
+{% highlight javascript %}
+for(var i:number = 0; i < 10; i++) {
+	drawing.beginFill(OxFF0000, i/10);
+	drawing.drawCircle(200, 200, i* 200);
+}
+{% endhighlight %}
 
-	</body>
-</html>
-```
+**staircase**
 
-**That's pretty boring**.
+{% highlight javascript %}
+drawing.beginFill(OxFF0000);
+for(var i:number = 0; i < 10; i++) {
+	drawing.drawCircle(i*20, i*20, 20, 20);
+}
+{% endhighlight %}
 
-If you add a script to the page like so:
+**targeting**
 
-```
-<script>
-	document.write("<h1>Hello world!</h1>");
-</script>
-```
+{% highlight javascript %}
+drawing.lineStyle(1, 0x000000, 1);
+for(var i:number = 0; i < 10; i++) {
+	drawing.drawCircle(0, 0, i*20, i*20);
+}
+{% endhighlight %}
 
-*Once your script runs* your page will now look like this:
 
-```
-<html>
-	<head>
-	</head>
-	<body>
-		<h1>Hello world!</h1>
-	</body>
-</html>
-```
+Math.random()
+--------------------------------------
 
-Pretty great, huh?
+The time has come.
+
+Math.random() is a way to get random data into our programs without the need for user input.
+
+It always produces a number between zero and one.
+
+
+**Scaling to a random number**
+
+If you multiply Math.random() it will produce a number between zero and the number you multiply by.
+
+{% highlight javascript %}
+var betweenZeroAndFive:number = Math.random() * 5;
+{% endhighlight %}
+
+**Scaling to a random, whole number**
+
+Using Math.round.
+
+(You could also using Math.ceil to always round up, or Math.floor to always round down)
+
+{% highlight javascript %}
+var betweenZeroAndFive:number = Math.round(Math.random() * 5);
+{% endhighlight %}
+
+
+
+Circles.. everywhere
+------------------------------------------
+
+A combination of a loop and a scaled Math.random() can get us a nice result wtihout a lot of work.
+
+{% highlight javascript %}
+var randX:number;
+var randY:number;
+var randY:number;
+
+for(var i:number = 0; i < 100; i++) {
+	drawing.beginFill(0x00FF00);
+
+	randX = Math.random() * 800;
+	randY = Math.random() * 600;
+	randR = Math.random() * 80;
+
+	drawing.drawCircle(randX, randY, randR);
+}
+{% endhighlight %}
