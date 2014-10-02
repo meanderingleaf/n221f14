@@ -32,11 +32,11 @@ Making an Array
 ---------------------
 
 {% highlight javascript %}
-	var myArray[]:number = [1,2,3,4];
+	var myArray:number[] = [1,2,3,4];
 {% endhighlight %}
 
 {% highlight javascript %}
-	var myArray[]:string = [];
+	var myArray:string[] = [];
 {% endhighlight %}
 
 
@@ -47,7 +47,7 @@ Getting a value out of an array
 Write the square brackets, and inside the index you want.
 
 {% highlight javascript %}
-	var myArray[]:number = [5,4,3,2,1];
+	var myArray:number[] = [5,4,3,2,1];
 	myArray[0]; // 5
 	myArray[2]; // 3
 	myArray[3]; // 2
@@ -82,7 +82,7 @@ Some array examples
 ---------------------------------
 
 {% highlight javascript %}
-	var myArray[]:string = new Array("This", "array", "already", "has", "some", "content"); 
+	var myArray:string[] = new Array("This", "array", "already", "has", "some", "content"); 
 	console.log(myArray[0]); 
 	console.log(myArray[2]); 
 	console.log(myArray.toString());
@@ -94,7 +94,7 @@ already
 This, array, already, has, some, content
 
 {% highlight javascript %}
-	var myArray = new Array("This", "array", "already", "has", "some", "content");
+	var myArray:string[] = new Array("This", "array", "already", "has", "some", "content");
 	var firstWord = myArray.pop(); 
 	console.log(firstWord); 
 	var lastWord = myArray.shift();
@@ -117,7 +117,7 @@ Example:
 
 {% highlight javascript %}
 	var statement = “Some dogs have two teeth”;
-	var splitStatement = statement.split(“ “); //split on the spaces
+	var splitStatement:string[] = statement.split(“ “); //split on the spaces
 {% endhighlight %}
 
 The data in splitStatement will be
@@ -128,10 +128,10 @@ Yep, you can split on anything
 
 {% highlight javascript %}
 	var source = “Dogs,cats,rats,mice”;
-	var split = source.split(“,”); // [ “Dogs”, “cats”, “rats”, “mice” ]
+	var split:string[] = source.split(“,”); // [ “Dogs”, “cats”, “rats”, “mice” ]
 
 	var source = “Dogs,cats,rats,mice”;
-	var split = source.split(“rats,”); // [ “Dogs,cats,”,“mice” ];
+	var split:string[] = source.split(“rats,”); // [ “Dogs,cats,”,“mice” ];
 {% endhighlight %}
 
 
@@ -151,7 +151,7 @@ Summing up items in an array
 
 {% highlight javascript %}
 	var sum = 0;
-	var myArray = [ 2, 4, 6, 8, 10 ];
+	var myArray:number[] = [ 2, 4, 6, 8, 10 ];
 	for(var i =o; i , myArray.length; i++) {
 		var itemAtIndex = myArray[i];
 		sum += itemAtIndex;
@@ -163,7 +163,7 @@ Searching Arrays
 
 
 {% highlight javascript %}
-	var myArray = [ “Spock”, “Kirk”, “McCoy”, “Luffy” ];
+	var myArray:string[] = [ “Spock”, “Kirk”, “McCoy”, “Luffy” ];
 	var thingToLookFor = “Luffy”;
 
 	for(var i =0; i < myArray.length; i++) {
@@ -183,7 +183,7 @@ Boxes of different sizes!
 -----------------------------------------
 
 {% highlight javascript %}
-var boxSizes[]:number = [10, 20, 30, 100];
+var boxSizes:number[] = [10, 20, 30, 100];
 
 for(var i:number = 0; i < boxSizes.length; i++) {
 	var currentSize:number = boxSizes[i];
@@ -198,7 +198,7 @@ The colors!
 ------------------------------------------
 
 {% highlight javascript %}
-var colors[]:number = [0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00, 0x00FFFF, 0xFF00FF];
+var colors:number[] = [0xFF0000, 0x00FF00, 0x0000FF, 0xFFFF00, 0x00FFFF, 0xFF00FF];
 
 for(var i:number = 0; i < boxSizes.length; i++) {
 	var currentColor:number = colors[i];
@@ -218,15 +218,15 @@ Parallel arrays are simple, really. They are two arrays where the each entry in 
 
 
 {% highlight javascript %}
-var positionsX[]:number = [10, 50, 99];
-var positionsY[]:number = [1, 22, 45];
+var positionsX:number[] = [10, 50, 99];
+var positionsY:number[] = [1, 22, 45];
 {% endhighlight %}
 
 These two arrays are storing the points : (10,1),  (50,22), (99,45). The way the access them in code is like such:
 
 {% highlight javascript %}
-var positionsX[]:number = [10, 50, 99];
-var positionsY[]:number = [1, 22, 45];
+var positionsX:number[] = [10, 50, 99];
+var positionsY:number[] = [1, 22, 45];
 
 for(var i:number = 0; i < positionsX.length; i++) {
 	console.log( positionsX[i], positionsY[i] );
@@ -240,8 +240,8 @@ Great! Now, let's use those to make a snake that follows our mouse. (This assume
 
 
 {% highlight javascript %}
-var positionsX[]:number = [];
-var positionsY[]:number = [];
+var positionsX:number[] = [];
+var positionsY:number[] = [];
 
 //initialize the arrays to have 50 zeroes in them
 for(var i:number = 0; i < 50; i++) {
