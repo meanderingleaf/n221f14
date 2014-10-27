@@ -29,23 +29,23 @@ An **event** is a way for the computer to inform an application or part of the a
 Event examples
 --------------------------
 
-Click on an input: click event
-Type 'some stuff': Keyup and keydown events
-Move mouse over and out of divs: mouse over and mouse out events
+- Click on an input: click event
+- Type 'some stuff': Keyup and keydown events
+- Move mouse over and out of divs: mouse over and mouse out events
 
 Some other events
 ---------------------------
 
-Image loaded
-Sound has finished playing
-Page has loaded
-Mouse has moved
+- Image loaded
+- Sound has finished playing
+- Page has loaded
+- Mouse has moved
 
 addEventListener
 -------------------------
 
-In order to know when an event has happened, we need to *listen* for that event
-To listen for an event, use **addEventListener** (this is, in general, a method of DOMElements)
+- In order to know when an event has happened, we need to *listen* for that event
+- To listen for an event, use **addEventListener** (this is, in general, a method of DOMElements)
 
 
 The process
@@ -54,8 +54,8 @@ The process
 
 There is two parts to dealing with events:
 
-The **event listener**: this is a method on every DOM element reference
-The **event handler**: this is a function that runs whenever the event 'fires'
+- The **event listener**: this is a method on every DOM element reference
+- The **event handler**: this is a function that runs whenever the event 'fires'
 
 
 Examples
@@ -128,6 +128,7 @@ function onMouseOver(event) {
 {% endhighlight %}
 
 Note that the second argument to addEventListener is simply the *name* of the function
+
 In other words, do not use () when doing an addEventListener call
 
 
@@ -143,9 +144,9 @@ domRerference.removeEventListener("mouseover", onMouseOver);
 Event target
 -----------------------
 
-All events have a 'target'
-Targets are, in general, the item that was listening for the event
-For instance, inside of a mouse event click handler on a div, you may get a reference to the div that was clicked
+- All events have a 'target'
+- Targets are, in general, the item that was listening for the event
+- For instance, inside of a mouse event click handler on a div, you may get a reference to the div that was clicked
 
 
 {% highlight javascript %}
@@ -164,7 +165,7 @@ Events
 Adding events to new objects
 -----------------------------
 
-
+{% highlight javascript %}
 var newElement = document.createElement("div");
 newElement.width = "100px";
 newElement.height = "100px";
@@ -175,3 +176,4 @@ newElement.addEventListener("click", function(event) {
 });
 
 domReference.appendChild(newElement);
+{% endhighlight %}
