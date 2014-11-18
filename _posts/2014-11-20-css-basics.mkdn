@@ -64,7 +64,7 @@ There are three major ways to select elements to be styled.
 3. Via IDs (a a # before the name to specify you're selecting an element with an ID)
 
 {% highlight css %}
-	/* the element with id='diglet' will have this style applied to it*/
+	/* the element with id='highlander' will have this style applied to it*/
 	#highlander {
 
 	}
