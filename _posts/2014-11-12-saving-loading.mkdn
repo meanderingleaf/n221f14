@@ -59,3 +59,23 @@ localStorage['dogIdeas'] = ideas.toString();
 //use parse float to turn the string back into a number
 var loadedIdeas = localStorage['dogAge'].split(',');
 {% endhighlight %}
+
+
+String replacement
+--------------------------------------
+
+Sometimes you just really need to do a find and replace on a string. You can use the .replace method replace substrings in a string what whatever you want. An example!
+
+{% highlight javascript %}
+
+var startString = "Digital Media".
+
+var replacedString = startString.replace("Media", "Love");
+
+console.log(startString); //will show "Digital Media";
+console.log(replacedString); //will show "Digital Love"
+
+{% endhighlight %}
+
+
+The major thing to note is that the replace method **does not change the original string** but rather just returns a new string with the replaced items. If you want to keep this replaced sting you will need to store it in a new variable.

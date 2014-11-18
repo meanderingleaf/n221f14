@@ -29,9 +29,9 @@ By default, divs will take up an entire row of the screen and push subsequent el
 Where to put your stylesheet
 --------------------------
 
-You can either put them into an external .css file and link them to your project with a <link href="tyles.css" rel="stylesheet" type="text/css" />
+You can either put them into an external .css file and link them to your project with a `<link href="tyles.css" rel="stylesheet" type="text/css" />`
 
-Or you can write your styles inside of a set of <style> tags in your html document.
+Or you can write your styles inside of a set of `<style>` tags in your html document.
 
 Selectors
 --------------------------
